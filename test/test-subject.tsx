@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react';
 import useStateSafely from '../src';
 
 type TestSubjectProps = {
@@ -13,8 +13,10 @@ export const TestSubject = ({ safe = false }: TestSubjectProps) => {
   const [state, setState] = useStateImpl(false);
 
   React.useEffect(() => {
-    window.setTimeout(() => { setState(true) }, UPDATE_STATE_DELAY);
-  }, [])
+    window.setTimeout(() => {
+      setState(true);
+    }, UPDATE_STATE_DELAY);
+  }, [setState]);
 
   return <h2>{state}</h2>;
 };

@@ -10,7 +10,7 @@ describe('it', () => {
     container = document.createElement('div');
     container.id = 'root';
     document.body.appendChild(container);
-    jest.useFakeTimers()
+    jest.useFakeTimers();
   });
 
   afterEach(() => {
@@ -29,7 +29,7 @@ describe('it', () => {
 
     act(() => {
       jest.advanceTimersByTime(UPDATE_STATE_DELAY);
-    })
+    });
 
     expect(spyOnConsoleError).not.toHaveBeenCalled();
 
