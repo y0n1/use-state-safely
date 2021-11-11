@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "1.0.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -48,6 +48,9 @@
   "repository": {
     "url": "https://github.com/y0n1/use-state-safely"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "author": "y0n1",
   "module": "dist/use-state-safely.esm.js",
   "size-limit": [
@@ -84,6 +87,5 @@
     "**/eslint-plugin-jsx-a11y": "^6.3.1",
     "**/eslint-plugin-react": "^7.20.3",
     "**/babel-eslint": "^10.0.0"
-
   }
 }
