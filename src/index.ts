@@ -1,18 +1,25 @@
-import * as React from 'react';
+import {
+  Dispatch,
+  SetStateAction,
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 
 export default function useStateSafely<S>(
   initialState: S,
-): [S, React.Dispatch<React.SetStateAction<S>>] {
-  const mountedRef = React.useRef(false);
-  React.useEffect(() => {
+): [S, Dispatch<SetStateAction<S>>] {
+  const mountedRef = useRef(false);
+  useEffect(() => {
     mountedRef.current = true;
     return () => {
       mountedRef.current = false;
     };
   }, []);
 
-  const [state, setState] = React.useState(initialState);
-  const setStateSafely: React.Dispatch<React.SetStateAction<S>> = React.useCallback((arg) => {
+  const [state, setState] = useState(initialState);
+  const setStateSafely = useCallback<Dispatch<SetStateAction<S>>>((arg) => {
     if (mountedRef.current) {
       setState(arg);
     }

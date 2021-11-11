@@ -1,5 +1,5 @@
-import * as React from 'react';
-import useStateSafely from '../src';
+import * as React from "react";
+import useStateSafely from "../src";
 
 type TestSubjectProps = {
   /** When set to false, will use React.useState. */
