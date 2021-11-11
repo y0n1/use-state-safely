@@ -45,6 +45,9 @@
     "trailingComma": "all"
   },
   "name": "@y0n1/use-state-safely",
+  "repository": {
+    "url": "https://github.com/y0n1/use-state-safely"
+  },
   "author": "y0n1",
   "module": "dist/use-state-safely.esm.js",
   "size-limit": [
